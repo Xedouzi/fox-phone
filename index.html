@@ -69,6 +69,7 @@
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body { overflow-x: clip; margin: 0; background: var(--papel); color: var(--tinta); font: 400 1.0625rem/1.65 var(--fonte); -webkit-tap-highlight-color: transparent; }
   img, svg { max-width: 100%; }
+  [hidden] { display: none !important; }
   figure, blockquote { margin: 0; }
   a { color: var(--laranja-texto); text-underline-offset: .18em; }
   a, button, input, select, label { touch-action: manipulation; }
@@ -161,8 +162,6 @@
   .aparelho { justify-self: center; position: relative; width: min(100%, 330px); aspect-ratio: 9 / 18.5; padding: 12px; border-radius: 46px; background: #232326; box-shadow: inset 0 0 0 1.5px #3A3A3F, 0 40px 80px -30px rgba(225, 105, 12, .35); }
   .aparelho::before { content: ""; position: absolute; z-index: 2; top: 24px; left: 50%; width: 30%; height: 22px; border-radius: 999px; background: #0B0B0C; transform: translateX(-50%); }
   .aparelho img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 35px; }
-  .aparelho-nota { position: absolute; left: -12%; bottom: 12%; display: grid; gap: .1rem; padding: .8rem 1rem; border-radius: 14px; background: #fff; color: var(--tinta); box-shadow: 0 18px 40px -20px rgba(0, 0, 0, .6); font-size: .9rem; line-height: 1.3; }
-  .aparelho-nota strong { font-family: var(--fonte-titulo); font-size: 1.35rem; font-weight: 700; color: var(--preto); letter-spacing: -.02em; }
   @media (max-width: 860px) {
     .abertura::before { background: linear-gradient(180deg, rgba(15, 15, 16, .3) 0%, var(--preto) 60%); }
     .abertura-grade { grid-template-columns: minmax(0, 1fr); min-height: 0; }
@@ -171,10 +170,8 @@
     .aparelho img { border-radius: 23px; }
     .aparelho::before { top: 15px; height: 14px; }
     .abertura h1 { font-size: clamp(1.75rem, 1.2rem + 3.4vw, 2.4rem); }
-    .aparelho-nota { left: auto; right: -62%; bottom: 10%; }
   }
   @media (max-width: 560px) { .abertura-lista { display: none; } .abertura-texto { gap: 1.1rem; } }
-  @media (max-width: 420px) { .aparelho-nota { right: -66%; padding: .6rem .75rem; font-size: .82rem; } .aparelho-nota strong { font-size: 1.15rem; } }
 
   /* entrada da abertura: o unico movimento automatico. As trilhas se desenham, o celular sobe */
   @media (prefers-reduced-motion: no-preference) {
@@ -188,16 +185,17 @@
 
   /* faixa de fatos */
   .fatos { background: var(--branco); border-bottom: 1px solid var(--linha); }
-  .fatos-grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .fato { display: grid; gap: .1rem; padding: 1.1rem 1.5rem 1.15rem 0; font-size: .95rem; color: var(--tinta-2); }
-  .fato + .fato { padding-left: 1.5rem; border-left: 1px solid var(--linha); }
+  .fatos-grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding-block: 1.25rem; }
+  .fato { display: flex; align-items: center; justify-content: center; gap: .9rem; min-width: 0; padding: 1rem 1.2rem; border-radius: var(--raio); background: var(--nevoa); font-size: .95rem; color: var(--tinta-2); }
+  .fato:nth-child(2) { background: var(--preto); color: #D9DADF; }
+  .fato:nth-child(2) strong { color: #fff; }
+  .fato-icone { display: grid; place-items: center; flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--laranja); color: var(--preto); }
+  .fato-icone svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .fato p { display: grid; gap: .05rem; min-width: 0; }
   .fato strong { color: var(--tinta); font-size: 1.02rem; font-weight: 650; }
-  .estrelas { display: inline-flex; gap: 1px; margin-right: .35rem; color: var(--laranja); vertical-align: -2px; }
-  .estrelas svg { width: 1rem; height: 1rem; }
-  @media (max-width: 760px) {
-    .fatos-grade { grid-template-columns: minmax(0, 1fr); }
-    .fato { padding: .9rem 0; }
-    .fato + .fato { padding-left: 0; border-left: 0; border-top: 1px solid var(--linha); }
+  @media (max-width: 860px) {
+    .fatos-grade { grid-template-columns: minmax(0, 1fr); padding-block: 1rem; }
+    .fato { justify-content: flex-start; }
     .fato:nth-child(n+2) { display: none; } /* no celular so a nota do Google */
   }
 
@@ -219,6 +217,8 @@
   .servico-desenho { width: 64px; height: 64px; padding: 10px; border-radius: 50%; background: var(--nevoa); }
   .servico-desenho :is(path, rect, circle) { fill: none; stroke: var(--laranja-texto); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
   .servico > * { min-width: 0; }
+  .servico { transition: border-color var(--dur-ui) ease, box-shadow var(--dur-ui) ease; }
+  @media (hover: hover) and (pointer: fine) { .servico:hover { border-color: var(--laranja); box-shadow: inset 0 0 0 1px var(--laranja); } }
   .servico p { color: var(--tinta-2); }
   .servico ul { display: grid; gap: .35rem; padding: 0; margin: .2rem 0 0; list-style: none; }
   .servico li { display: flex; gap: .55rem; align-items: baseline; }
@@ -312,9 +312,9 @@
   .fotos figure { aspect-ratio: 3 / 4; }
   .fotos figure:first-child { aspect-ratio: auto; }
   .avaliacoes { display: grid; gap: .8rem; margin-top: .6rem; }
-  .avaliacao { padding: 1.2rem 1.35rem; background: var(--papel); border-radius: var(--raio); }
-  .avaliacao p { font-size: 1.08rem; line-height: 1.45; font-weight: 500; }
-  .avaliacao footer { margin-top: .45rem; color: var(--tinta-2); font-size: .9rem; }
+  .avaliacao { padding: 1.2rem 1.35rem; background: var(--laranja); color: #fff; border-radius: var(--raio); }
+  .avaliacao p { font-size: 1.08rem; line-height: 1.45; font-weight: 600; }
+  .avaliacao footer { margin-top: .45rem; color: #fff; font-size: .9rem; }
   .avaliacoes-link { font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
   @media (max-width: 860px) { .loja-grade { grid-template-columns: minmax(0, 1fr); } }
 
@@ -336,7 +336,7 @@
   @media (max-width: 820px) { .contato-grade { grid-template-columns: minmax(0, 1fr); } .fachada { min-height: 300px; aspect-ratio: 1; } }
 
   /* ---------- rodape ---------- */
-  .rodape { background: var(--preto); color: #BFC1C7; padding: 2rem 0 calc(10rem + env(safe-area-inset-bottom)); font-size: .92rem; }
+  .rodape { background: var(--preto); color: #BFC1C7; padding: 1.6rem 0 calc(1.6rem + env(safe-area-inset-bottom)); font-size: .92rem; }
   .rodape-grade { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 2.5rem; }
   .rodape-grade > * { min-width: 0; max-width: 100%; }
   .rodape-dir { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.5rem; }
@@ -395,15 +395,14 @@
     </div>
     <div class="aparelho" style="--i:2">
       <img src="img/loja.webp" width="800" height="1067" alt="Interior da loja Fox Phone, com o balcão de atendimento e a parede de capas e acessórios" fetchpriority="high">
-      <p class="aparelho-nota"><strong>5,0</strong>296 avaliações no Google</p>
     </div>
   </div>
 </section>
 <div class="fatos">
   <div class="envoltorio fatos-grade">
-    <p class="fato"><strong><span class="estrelas" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg></span>5,0 no Google</strong><a href="https://maps.google.com/?cid=15683417079623364849" target="_blank" rel="noopener">Ler as 296 avaliações</a></p>
-    <p class="fato"><strong>Av. Pedro Duarte Amoroso, 1131</strong>João Berbel, Cravinhos</p>
-    <p class="fato"><strong>Boleto, cartão e Pix</strong>Venda no boleto para Android</p>
+    <div class="fato"><span class="fato-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg></span><p><strong>5,0 no Google</strong><a href="https://maps.google.com/?cid=15683417079623364849" target="_blank" rel="noopener">Ler as 296 avaliações</a></p></div>
+    <div class="fato"><span class="fato-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><p><strong>Av. Pedro Duarte Amoroso, 1131</strong>João Berbel, Cravinhos</p></div>
+    <div class="fato"><span class="fato-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10.5h18M7 15h4"/></svg></span><p><strong>Boleto, cartão e Pix</strong>Venda no boleto para Android</p></div>
   </div>
 </div>
 
@@ -482,6 +481,7 @@
           <fieldset class="passo">
             <legend><span class="passo-num" aria-hidden="true">1</span>Aparelho</legend>
             <div class="aparelhos" id="conserto-aparelhos"></div>
+            <label class="campo campo-nome" id="conserto-marca-campo" hidden><span>Qual é a marca? <small>(se souber)</small></span><input type="text" id="conserto-marca" placeholder="Ex.: Samsung ou Motorola" maxlength="30"></label>
           </fieldset>
           <fieldset class="passo">
             <legend><span class="passo-num" aria-hidden="true">2</span>Modelo</legend>
@@ -521,6 +521,7 @@
           <fieldset class="passo">
             <legend><span class="passo-num" aria-hidden="true">1</span>Marca</legend>
             <div class="aparelhos" id="celular-marcas"></div>
+            <label class="campo campo-nome" id="celular-marca-campo" hidden><span>Qual marca você prefere? <small>(opcional)</small></span><input type="text" id="celular-marca" placeholder="Ex.: Samsung ou Motorola" maxlength="30"></label>
           </fieldset>
           <fieldset class="passo">
             <legend><span class="passo-num" aria-hidden="true">2</span>Preferências</legend>
@@ -705,16 +706,26 @@ function aparelhosHTML(nome, marcado, lista = APARELHOS) {
 }
 const valor = (form, nome) => (form.querySelector(`[name="${nome}"]:checked`) || {}).value || "";
 
+/* campo de marca: so aparece no "Outro Android", com o mesmo fade das trocas */
+function mostrarMarca(campo, mostrar) {
+  if (campo.hidden === !mostrar) return;
+  campo.hidden = !mostrar;
+  if (mostrar) piscar(campo);
+}
+
 /* ---------- orcamento de conserto ---------- */
 const fConserto = $("#form-conserto");
 $("#conserto-aparelhos").innerHTML = aparelhosHTML("aparelho", "iPhone");
 $("#conserto-problemas").innerHTML = opcoesHTML(PROBLEMAS, "problema", "checkbox");
 function mensagemConserto() {
   const aparelho = valor(fConserto, "aparelho");
+  mostrarMarca($("#conserto-marca-campo"), aparelho === "Outro Android");
+  const marca = aparelho === "Outro Android" ? $("#conserto-marca").value.trim() : "";
+  const base = marca || aparelho;
   const modelo = $("#conserto-modelo").value.trim();
   const problemas = [...fConserto.querySelectorAll('[name="problema"]:checked')].map((i) => i.value.toLowerCase());
   const nome = $("#conserto-nome").value.trim();
-  const linhas = [`Olá! Gostaria de um orçamento de conserto.`, `Aparelho: ${modelo ? modelo : aparelho}${modelo && !modelo.toLowerCase().includes(aparelho.toLowerCase().split(" ")[0]) ? ` (${aparelho})` : ""}`];
+  const linhas = [`Olá! Gostaria de um orçamento de conserto.`, `Aparelho: ${modelo ? modelo : base}${modelo && !modelo.toLowerCase().includes(base.toLowerCase().split(" ")[0]) ? ` (${base})` : ""}`];
   if (problemas.length) linhas.push(`Problema: ${problemas.join(", ")}`);
   if (nome) linhas.push(`Meu nome é ${nome}.`);
   const texto = linhas.join("\n");
@@ -743,7 +754,9 @@ function mensagemCelular() {
   const noBoleto = pagamento === "Boleto";
   const condicao = valor(fCelular, "condicao"), memoria = valor(fCelular, "memoria");
   const modelo = $("#celular-modelo").value.trim(), nome = $("#celular-nome").value.trim();
-  const tipo = marca === "Outro Android" ? "um celular Android" : `um ${marca}`;
+  mostrarMarca($("#celular-marca-campo"), marca === "Outro Android");
+  const outraMarca = marca === "Outro Android" ? $("#celular-marca").value.trim() : "";
+  const tipo = marca === "Outro Android" ? (outraMarca ? `um celular ${outraMarca}` : "um celular Android") : `um ${marca}`;
   const linhas = [`Olá! Tenho interesse em ${tipo}${condicao === "Sem preferência" ? "" : " " + condicao.toLowerCase()}.`];
   if (modelo) linhas.push(`Modelo: ${modelo}`);
   if (memoria !== "Sem preferência") linhas.push(`Armazenamento: ${memoria}`);
