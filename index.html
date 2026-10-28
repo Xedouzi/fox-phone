@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#0F0F10">
+<title>Fox Phone | iPhone, Xiaomi e assistência técnica em Cravinhos, SP</title>
+<meta name="description" content="iPhone e Xiaomi novos e seminovos, acessórios e assistência técnica em iPhone e Android. Av. Pedro Duarte Amoroso, 1131, Cravinhos. WhatsApp (16) 97406-2662.">
+<!-- DEMO: remover a linha abaixo quando publicar no dominio definitivo do cliente -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%230F0F10%27%2F%3E%3Crect%20x%3D%279%27%20y%3D%2711%27%20width%3D%2714%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27none%27%20stroke%3D%27%23E1690C%27%20stroke-width%3D%272.6%27%2F%3E%3Cpath%20d%3D%27M14%2011V6l3%202%27%20fill%3D%27none%27%20stroke%3D%27%23E1690C%27%20stroke-width%3D%272.6%27%20stroke-linejoin%3D%27round%27%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500..800&family=Onest:wght@400..700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobilePhoneStore",
+  "name": "Fox Phone",
+  "legalName": "Fox Phone Eletronicos Ltda",
+  "telephone": "+55-16-97406-2662",
+  "image": "img/fachada.webp",
+  "address": { "@type": "PostalAddress", "streetAddress": "Av. Pedro Duarte Amoroso, 1131 - João Berbel", "addressLocality": "Cravinhos", "addressRegion": "SP", "postalCode": "14140-000", "addressCountry": "BR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": -21.3383598, "longitude": -47.7468516 },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "296" },
+  "sameAs": ["https://www.instagram.com/foxphone016"]
+}
+</script>
+<style>
+  /* ============================================================
+     IDENTIDADE - preto e laranja do logo (a raposa no "O").
+     Elemento da casa: as TRILHAS DE PLACA (o circuito do celular
+     aberto na bancada), desenhadas por script: abertura, bordas
+     entre as secoes e o painel da mensagem. Papel frio + branco.
+     ============================================================ */
+  :root {
+    color-scheme: only light;
+    --branco:   #FFFFFF;
+    --papel:    #F2F3F5;   /* off-white frio */
+    --nevoa:    #FCEEE3;   /* laranja bem diluido */
+    --linha:    #E1E3E8;
+    --linha-forte: #8A8D96;/* contorno de controle: 3:1 no branco */
+    --tinta:    #141416;
+    --tinta-2:  #52555D;   /* 7.4:1 no branco */
+    --preto:    #0F0F10;   /* o preto do logo e da fachada */
+    --preto-2:  #1E1E21;
+    --laranja:  #E1690C;   /* a raposa: 6.6:1 sobre o preto */
+    --laranja-texto: #B0500A; /* laranja para texto no branco: 5:1 */
+    --laranja-claro: #FFB27A; /* trilhas sobre o preto */
+    --raio:     14px;
+
+    /* movimento padrao do site: um so jeito de entrar e sair */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --dur-entra: .7s;
+    --dur-ui: .22s;
+
+    --fonte: "Onest", "Onest reserva", Arial, sans-serif;
+    --fonte-titulo: "Unbounded", "Unbounded reserva", "Arial Black", sans-serif;
+    --largura: 1200px;
+    --margem: clamp(16px, 4vw, 40px);
+  }
+  @font-face { font-family: "Onest reserva"; src: local("Arial"); size-adjust: 101%; }
+  @font-face { font-family: "Unbounded reserva"; src: local("Arial Black"), local("Arial Bold"); size-adjust: 104%; }
+
+  /* ---------- base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { overflow-x: clip; margin: 0; background: var(--papel); color: var(--tinta); font: 400 1.0625rem/1.65 var(--fonte); -webkit-tap-highlight-color: transparent; }
+  img, svg { max-width: 100%; }
+  figure, blockquote { margin: 0; }
+  a { color: var(--laranja-texto); text-underline-offset: .18em; }
+  a, button, input, select, label { touch-action: manipulation; }
+  :focus-visible { outline: 3px solid var(--laranja); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--fonte-titulo); font-weight: 650; line-height: 1.08; margin: 0; letter-spacing: -.02em; text-wrap: balance; overflow-wrap: break-word; color: var(--preto); }
+  h2 { font-size: clamp(1.7rem, 1.25rem + 1.9vw, 2.55rem); }
+  h3 { font-size: 1.12rem; letter-spacing: -.01em; }
+  p { margin: 0; }
+  p, li, label, dd, dt, small, legend, figcaption, .btn { overflow-wrap: anywhere; }
+  .envoltorio { max-width: var(--largura); margin-inline: auto; padding-inline: var(--margem); }
+  .so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .pular { position: absolute; left: 1rem; top: -5rem; z-index: 50; padding: .8rem 1rem; background: var(--branco); color: var(--tinta); }
+  .pular:focus { top: 1rem; }
+
+  /* ---------- movimento padrao: revela ao rolar (uma vez), some/aparece nas trocas ---------- */
+  .com-js [data-revela] { opacity: 0; transform: translateY(16px); transition: opacity var(--dur-entra) var(--ease-out), transform var(--dur-entra) var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
+  .com-js [data-revela].visto { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .com-js [data-revela] { transform: none; transition: opacity .3s ease; transition-delay: 0s; }
+  }
+
+  /* botoes */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem; max-width: 100%;
+    min-height: 52px; padding: .75rem 1.35rem; border: 0; border-radius: 999px;
+    background: var(--preto); color: #fff; font: 600 1rem/1.2 var(--fonte); text-decoration: none; text-align: center; cursor: pointer;
+    transition: background-color var(--dur-ui) ease, box-shadow var(--dur-ui) ease, transform .12s var(--ease-out);
+  }
+  .btn:hover { background: var(--preto-2); }
+  .btn:active { transform: scale(.97); }
+  .btn svg { width: 1.25em; height: 1.25em; flex: none; }
+  .btn-laranja { background: var(--laranja); color: var(--preto); }
+  .btn-laranja:hover { background: #F07A1E; }
+  .btn-vidro { background: rgba(255, 255, 255, .06); color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .55); }
+  .btn-vidro:hover { background: rgba(255, 255, 255, .13); }
+  .btn-linha { background: var(--branco); color: var(--preto); box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .btn-linha:hover { box-shadow: inset 0 0 0 1.5px var(--preto); background: var(--papel); }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:active { transform: none; } }
+
+  /* ---------- topo ---------- */
+  .topo { position: relative; z-index: 20; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .topo-grade { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; padding-block: .9rem; }
+  .marca { display: inline-flex; align-items: center; min-width: 0; min-height: 44px; text-decoration: none; }
+  .marca img { display: block; width: clamp(160px, 12vw + 90px, 210px); height: auto; }
+  .menu { display: flex; flex-wrap: wrap; gap: .25rem 1.6rem; align-items: center; }
+  .menu a { color: var(--tinta); text-decoration: none; padding: .55rem 0; font-weight: 500; font-size: .98rem; }
+  .menu a:hover { color: var(--laranja-texto); text-decoration: underline; }
+  .menu .menu-tel { color: var(--laranja-texto); font-weight: 700; }
+  .menu-botao { display: none; }
+  @media (max-width: 960px) {
+    .topo-grade { flex-wrap: nowrap; }
+    .menu-botao {
+      display: grid; align-content: center; justify-items: center; gap: 5px; flex: none; width: 52px; height: 52px; margin-right: -8px; padding: 0;
+      border: 0; border-radius: var(--raio); background: none; cursor: pointer;
+    }
+    .menu-botao span { display: block; width: 28px; height: 4px; border-radius: 4px; background: var(--preto); transition: transform .25s var(--ease-out), opacity .2s; }
+    .menu-aberto .menu-botao span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-aberto .menu-botao span:nth-child(2) { opacity: 0; }
+    .menu-aberto .menu-botao span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    /* o menu entra e sai com o mesmo fade */
+    .menu {
+      display: grid; position: absolute; top: 100%; left: 0; right: 0;
+      grid-template-columns: minmax(0, 1fr); gap: 0; padding: .5rem var(--margem) 1.25rem;
+      background: var(--branco); border-bottom: 1px solid var(--linha); box-shadow: 0 18px 30px -22px rgba(15, 15, 16, .5);
+      opacity: 0; visibility: hidden; transform: translateY(-6px);
+      transition: opacity var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out), visibility 0s linear var(--dur-ui);
+    }
+    .menu-aberto .menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+    .menu a { display: flex; align-items: center; min-height: 52px; padding: 0; border-bottom: 1px solid var(--linha); font-size: 1.05rem; }
+    .menu a:last-child { border-bottom: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .menu-botao span, .menu { transition: none !important; } }
+
+  /* ---------- abertura: preto com as trilhas de placa ---------- */
+  .abertura { position: relative; overflow: hidden; background: var(--preto); color: #fff; isolation: isolate; }
+  .trilhas { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; pointer-events: none; }
+  .trilhas path { fill: none; stroke: var(--laranja-claro); stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
+  .trilhas circle { fill: var(--preto); stroke: var(--laranja-claro); stroke-width: 1.3; }
+  .abertura::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--preto) 0%, rgba(15, 15, 16, .9) 40%, rgba(15, 15, 16, .2) 72%); }
+  .abertura-grade { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: center; gap: clamp(2rem, 5vw, 4rem); min-height: clamp(540px, calc(100svh - 9rem), 760px); padding-block: clamp(3rem, 8vh, 5.5rem); }
+  .abertura-texto { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: start; gap: 1.4rem; min-width: 0; }
+  .abertura-texto > * { max-width: 100%; }
+  .abertura h1 { overflow-wrap: anywhere; hyphens: manual; max-width: 14em; color: #fff; font-size: clamp(2rem, 1.2rem + 3.4vw, 3.9rem); font-weight: 700; line-height: 1.04; letter-spacing: -.035em; }
+  .abertura-sub { max-width: 32rem; font-size: clamp(1.08rem, 1rem + .35vw, 1.25rem); color: #D9DADF; }
+  .abertura-acoes { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .3rem; }
+  .abertura-lista { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; padding: 0; margin: .2rem 0 0; list-style: none; color: #fff; font-weight: 500; }
+  .abertura-lista li { display: inline-flex; align-items: center; gap: .5rem; }
+  .abertura-lista svg { width: 1.15rem; height: 1.15rem; color: var(--laranja); flex: none; }
+  /* o celular com a foto da loja na tela */
+  .aparelho { justify-self: center; position: relative; width: min(100%, 330px); aspect-ratio: 9 / 18.5; padding: 12px; border-radius: 46px; background: #232326; box-shadow: inset 0 0 0 1.5px #3A3A3F, 0 40px 80px -30px rgba(225, 105, 12, .35); }
+  .aparelho::before { content: ""; position: absolute; z-index: 2; top: 24px; left: 50%; width: 30%; height: 22px; border-radius: 999px; background: #0B0B0C; transform: translateX(-50%); }
+  .aparelho img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 35px; }
+  .aparelho-nota { position: absolute; left: -12%; bottom: 12%; display: grid; gap: .1rem; padding: .8rem 1rem; border-radius: 14px; background: #fff; color: var(--tinta); box-shadow: 0 18px 40px -20px rgba(0, 0, 0, .6); font-size: .9rem; line-height: 1.3; }
+  .aparelho-nota strong { font-family: var(--fonte-titulo); font-size: 1.35rem; font-weight: 700; color: var(--preto); letter-spacing: -.02em; }
+  @media (max-width: 860px) {
+    .abertura::before { background: linear-gradient(180deg, rgba(15, 15, 16, .3) 0%, var(--preto) 60%); }
+    .abertura-grade { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+    .abertura-grade { padding-block: 1.5rem 3rem; gap: 1.5rem; }
+    .aparelho { order: -1; width: min(44%, 175px); padding: 8px; border-radius: 30px; }
+    .aparelho img { border-radius: 23px; }
+    .aparelho::before { top: 15px; height: 14px; }
+    .abertura h1 { font-size: clamp(1.75rem, 1.2rem + 3.4vw, 2.4rem); }
+    .aparelho-nota { left: auto; right: -62%; bottom: 10%; }
+  }
+  @media (max-width: 560px) { .abertura-lista { display: none; } .abertura-texto { gap: 1.1rem; } }
+  @media (max-width: 420px) { .aparelho-nota { right: -66%; padding: .6rem .75rem; font-size: .82rem; } .aparelho-nota strong { font-size: 1.15rem; } }
+
+  /* entrada da abertura: o unico movimento automatico. As trilhas se desenham, o celular sobe */
+  @media (prefers-reduced-motion: no-preference) {
+    .com-js .trilhas path { stroke-dasharray: var(--len) var(--len); stroke-dashoffset: var(--len); animation: trilha 1.8s var(--ease-out) forwards; animation-delay: calc(var(--i, 0) * 40ms); }
+    .com-js .trilhas circle { opacity: 0; animation: aparece .4s ease-out forwards; animation-delay: calc(.9s + var(--i, 0) * 40ms); }
+    .com-js .abertura-texto > *, .com-js .aparelho { opacity: 0; transform: translateY(18px); animation: sobe var(--dur-entra) var(--ease-out) forwards; animation-delay: calc(.1s + var(--i, 0) * 90ms); }
+  }
+  @keyframes trilha { to { stroke-dashoffset: 0; } }
+  @keyframes aparece { to { opacity: 1; } }
+  @keyframes sobe { to { opacity: 1; transform: none; } }
+
+  /* faixa de fatos */
+  .fatos { background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .fatos-grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .fato { display: grid; gap: .1rem; padding: 1.1rem 1.5rem 1.15rem 0; font-size: .95rem; color: var(--tinta-2); }
+  .fato + .fato { padding-left: 1.5rem; border-left: 1px solid var(--linha); }
+  .fato strong { color: var(--tinta); font-size: 1.02rem; font-weight: 650; }
+  .estrelas { display: inline-flex; gap: 1px; margin-right: .35rem; color: var(--laranja); vertical-align: -2px; }
+  .estrelas svg { width: 1rem; height: 1rem; }
+  @media (max-width: 760px) {
+    .fatos-grade { grid-template-columns: minmax(0, 1fr); }
+    .fato { padding: .9rem 0; }
+    .fato + .fato { padding-left: 0; border-left: 0; border-top: 1px solid var(--linha); }
+    .fato:nth-child(n+2) { display: none; } /* no celular so a nota do Google */
+  }
+
+  /* ---------- secoes ---------- */
+  .secao { padding-block: clamp(3.5rem, 8vw, 6rem); }
+  .secao-branca { background: var(--branco); }
+  .secao-cabeca { display: grid; gap: .8rem; max-width: 44rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+  .secao-cabeca p { color: var(--tinta-2); font-size: 1.08rem; }
+  /* borda de trilha entre as secoes */
+  .borda { display: block; width: 100%; height: 36px; background: var(--papel); }
+  .borda path { fill: none; stroke: var(--laranja); stroke-width: 1.4; opacity: .55; }
+  .borda circle { fill: var(--papel); stroke: var(--laranja); stroke-width: 1.4; opacity: .7; }
+  .borda-branca { background: var(--branco); }
+  .borda-branca circle { fill: var(--branco); }
+
+  /* ---------- servicos: o destaque da pagina ---------- */
+  .servicos { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1rem; }
+  .servico { grid-column: span 4; display: grid; align-content: start; gap: .7rem; padding: 1.6rem 1.6rem 1.5rem; background: var(--branco); border-radius: var(--raio); border: 1px solid var(--linha); }
+  .servico-desenho { width: 64px; height: 64px; padding: 10px; border-radius: 50%; background: var(--nevoa); }
+  .servico-desenho :is(path, rect, circle) { fill: none; stroke: var(--laranja-texto); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .servico > * { min-width: 0; }
+  .servico p { color: var(--tinta-2); }
+  .servico ul { display: grid; gap: .35rem; padding: 0; margin: .2rem 0 0; list-style: none; }
+  .servico li { display: flex; gap: .55rem; align-items: baseline; }
+  .servico li::before { content: ""; flex: none; width: .5rem; height: .5rem; border-radius: 50%; background: var(--laranja); transform: translateY(-.1rem); }
+  .servico a { justify-self: start; margin-top: .3rem; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
+  /* assistencia: o cartao grande, em preto */
+  .servico-destaque { grid-column: span 8; grid-row: span 2; position: relative; overflow: hidden; isolation: isolate; background: var(--preto); border-color: var(--preto); color: #fff; padding: clamp(1.6rem, 3.5vw, 2.6rem); align-content: space-between; }
+  .servico-destaque h3 { color: #fff; font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.2rem); line-height: 1.1; }
+  .servico-destaque p { color: #D9DADF; font-size: 1.08rem; max-width: 34rem; }
+  .servico-destaque .servico-desenho { background: rgba(225, 105, 12, .16); }
+  .servico-destaque .servico-desenho :is(path, rect, circle) { stroke: var(--laranja); }
+  .servico-destaque ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1.5rem; margin-top: .6rem; font-weight: 500; }
+  .servico-destaque .trilhas-cartao { position: absolute; z-index: -1; right: -6%; bottom: -12%; width: 55%; height: 80%; opacity: .32; pointer-events: none; }
+  .servico-destaque .trilhas-cartao path { fill: none; stroke: var(--laranja); stroke-width: 1.2; }
+  .servico-destaque .trilhas-cartao circle { fill: var(--preto); stroke: var(--laranja); stroke-width: 1.2; }
+  .servico-destaque .btn { justify-self: start; margin-top: 1rem; }
+  .servico-menor { grid-column: span 4; }
+  .boleto { grid-column: 1 / -1; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem 1.5rem; padding: 1.3rem 1.6rem; border-radius: var(--raio); background: var(--nevoa); }
+  .boleto svg { width: 46px; height: 46px; fill: none; stroke: var(--laranja-texto); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .boleto strong { display: block; font-family: var(--fonte-titulo); font-size: 1.1rem; font-weight: 650; color: var(--preto); letter-spacing: -.01em; }
+  .boleto p { color: var(--tinta); }
+  @media (max-width: 980px) {
+    .servico-destaque { grid-column: 1 / -1; grid-row: auto; }
+    .servico, .servico-menor { grid-column: span 6; }
+  }
+  @media (max-width: 640px) {
+    .servico, .servico-menor { grid-column: 1 / -1; }
+    .servico-destaque ul { grid-template-columns: minmax(0, 1fr); }
+    .boleto { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  /* ---------- ferramentas: orcamento de conserto e escolha do celular ---------- */
+  .ferramenta-grade { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: stretch; }
+  .ferramenta-form { display: grid; gap: 2rem; align-content: start; }
+  .passo { display: grid; gap: .9rem; min-width: 0; margin: 0; padding: 0; border: 0; }
+  .passo legend { display: flex; align-items: center; gap: .7rem; padding: 0; margin-bottom: .9rem; font-family: var(--fonte-titulo); font-size: 1.1rem; font-weight: 650; color: var(--preto); letter-spacing: -.01em; }
+  .passo-num { display: grid; place-items: center; width: 2.1rem; height: 2.1rem; flex: none; border-radius: 50%; background: var(--preto); color: var(--laranja); font-size: .95rem; line-height: 1; }
+  .aparelhos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
+  .tipo { position: relative; display: grid; justify-items: center; gap: .4rem; padding: .9rem .5rem .85rem; border-radius: var(--raio); background: var(--papel); box-shadow: inset 0 0 0 1px var(--linha); cursor: pointer; text-align: center; font-weight: 600; font-size: .98rem; transition: background-color var(--dur-ui) ease, box-shadow var(--dur-ui) ease, color var(--dur-ui) ease; }
+  .tipo:hover { box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .tipo input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+  .tipo svg { width: 40px; height: 52px; }
+  .tipo svg :is(path, rect, circle) { fill: none; stroke: var(--preto); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: stroke var(--dur-ui) ease; }
+  .tipo:has(input:checked) { background: var(--preto); color: #fff; box-shadow: none; }
+  .tipo:has(input:checked) svg :is(path, rect, circle) { stroke: var(--laranja); }
+  .tipo:has(input:focus-visible) { outline: 3px solid var(--laranja); outline-offset: 3px; }
+  .tipo:has(input:disabled) { opacity: .45; cursor: not-allowed; }
+  .campos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.1rem; }
+  .campo { display: grid; grid-template-columns: minmax(0, 1fr); gap: .35rem; min-width: 0; font-weight: 600; font-size: .98rem; }
+  .campo-largo { grid-column: 1 / -1; }
+  .campo small { font-weight: 400; color: var(--tinta-2); }
+  .campo input {
+    width: 100%; min-width: 0; min-height: 50px; padding: .7rem .9rem; border: 0; border-radius: 10px;
+    background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta); font: 400 1.02rem/1.3 var(--fonte);
+    transition: box-shadow var(--dur-ui) ease;
+  }
+  .campo input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--laranja); }
+  .campo-nome { max-width: 26rem; }
+  .opcoes { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .opcao { position: relative; display: inline-flex; align-items: center; min-height: 46px; padding: .55rem 1rem; border-radius: 999px; background: var(--papel); box-shadow: inset 0 0 0 1px var(--linha-forte); cursor: pointer; font-size: .98rem; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease, box-shadow var(--dur-ui) ease; }
+  .opcao input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+  .opcao:has(input:checked) { background: var(--preto); color: #fff; box-shadow: none; }
+  .opcao:has(input:focus-visible) { outline: 3px solid var(--laranja); outline-offset: 3px; }
+  .opcao:has(input:disabled) { opacity: .45; cursor: not-allowed; }
+  .aviso { font-size: .95rem; color: var(--tinta-2); }
+  /* painel preto da altura do formulario, conteudo fixo ao rolar */
+  .painel { position: relative; overflow: hidden; border-radius: var(--raio); background: var(--preto); color: #fff; isolation: isolate; }
+  .painel-fixo { position: sticky; top: 1.25rem; display: grid; gap: 1rem; padding: clamp(1.25rem, 3vw, 1.9rem); }
+  .painel h3 { color: #fff; font-size: 1.05rem; }
+  .painel-destino { display: flex; align-items: center; gap: .6rem; font-size: .95rem; color: #D9DADF; }
+  .painel-destino strong { color: var(--laranja); font-weight: 600; }
+  .painel-trilhas { position: absolute; z-index: -1; left: -10%; bottom: -8%; width: 120%; height: 55%; opacity: .35; pointer-events: none; }
+  .painel-trilhas path { fill: none; stroke: var(--laranja); stroke-width: 1.2; }
+  .painel-trilhas circle { fill: var(--preto); stroke: var(--laranja); stroke-width: 1.2; }
+  .previa { position: relative; padding: 1rem 1.1rem 1.2rem; border-radius: 12px 12px 12px 3px; background: #D9FDD3; color: #12241B; font-size: 1rem; line-height: 1.55; white-space: pre-line; overflow-wrap: anywhere; }
+  .btn-zap { background: var(--laranja); color: var(--preto); }
+  .btn-zap:hover { background: #F07A1E; }
+  .painel-nota { color: #BFC1C7; font-size: .95rem; }
+  .painel-nota a { color: #fff; font-weight: 600; }
+  @media (max-width: 900px) { .ferramenta-grade { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 560px) { .campos { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 380px) { .aparelhos { grid-template-columns: minmax(0, 1fr); } .tipo { grid-template-columns: auto minmax(0, 1fr); justify-items: start; align-items: center; text-align: left; } .tipo svg { width: 30px; height: 40px; } }
+
+  /* ---------- a loja ---------- */
+  .loja-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+  .loja-texto { display: grid; gap: 1.1rem; }
+  .loja-texto > p { font-size: 1.1rem; max-width: 36rem; }
+  .fotos { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: .75rem; }
+  .fotos img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--raio); }
+  .fotos figure:first-child { grid-row: span 2; }
+  .fotos figure { aspect-ratio: 3 / 4; }
+  .fotos figure:first-child { aspect-ratio: auto; }
+  .avaliacoes { display: grid; gap: .8rem; margin-top: .6rem; }
+  .avaliacao { padding: 1.2rem 1.35rem; background: var(--papel); border-radius: var(--raio); }
+  .avaliacao p { font-size: 1.08rem; line-height: 1.45; font-weight: 500; }
+  .avaliacao footer { margin-top: .45rem; color: var(--tinta-2); font-size: .9rem; }
+  .avaliacoes-link { font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
+  @media (max-width: 860px) { .loja-grade { grid-template-columns: minmax(0, 1fr); } }
+
+  /* ---------- onde estamos ---------- */
+  .contato-grade { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: stretch; }
+  .contato-dados { display: grid; gap: 1.5rem; align-content: start; }
+  .contato-dados h3 { font-size: 1rem; font-family: var(--fonte); font-weight: 700; color: var(--tinta); margin-bottom: .2rem; letter-spacing: 0; }
+  .zaps { display: grid; gap: .55rem; }
+  .zap-linha { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .zap-linha a { font-family: var(--fonte-titulo); font-size: clamp(1.2rem, 1rem + .8vw, 1.5rem); font-weight: 650; text-decoration: none; letter-spacing: -.02em; min-height: 44px; display: inline-flex; align-items: center; }
+  .zap-linha a:hover { text-decoration: underline; }
+  .zap-linha span { color: var(--tinta-2); font-size: .95rem; }
+  .fachada { position: relative; overflow: hidden; border-radius: var(--raio); min-height: 380px; background: var(--preto); }
+  .fachada > img { display: block; width: 100%; height: 100%; object-fit: cover; transition: opacity .35s var(--ease-out); }
+  .fachada .mapa-quadro { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; opacity: 0; transition: opacity .35s var(--ease-out); }
+  .fachada .mapa-quadro.visto { opacity: 1; }
+  .fachada .btn { position: absolute; left: 1rem; bottom: 1rem; transition: opacity .25s var(--ease-out), background-color var(--dur-ui) ease; }
+  .fachada.com-mapa > img, .fachada.com-mapa .btn { opacity: 0; pointer-events: none; }
+  @media (max-width: 820px) { .contato-grade { grid-template-columns: minmax(0, 1fr); } .fachada { min-height: 300px; aspect-ratio: 1; } }
+
+  /* ---------- rodape ---------- */
+  .rodape { background: var(--preto); color: #BFC1C7; padding: 2rem 0 calc(10rem + env(safe-area-inset-bottom)); font-size: .92rem; }
+  .rodape-grade { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 2.5rem; }
+  .rodape-grade > * { min-width: 0; max-width: 100%; }
+  .rodape-dir { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.5rem; }
+  .rodape a { color: #fff; }
+  @media (max-width: 700px) { .rodape-grade { flex-direction: column; align-items: flex-start; } }
+
+  /* ---------- botao flutuante ---------- */
+  .flutuante {
+    display: grid; place-items: center; position: fixed; z-index: 40;
+    right: max(clamp(16px, 2vw, 28px), env(safe-area-inset-right)); bottom: calc(clamp(16px, 2vw, 28px) + env(safe-area-inset-bottom));
+    width: 62px; height: 62px; border-radius: 50%; background: #179A48; color: #fff;
+    box-shadow: 0 10px 28px -10px rgba(23, 154, 72, .7), 0 2px 6px rgba(15, 15, 16, .2);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s var(--ease-out), transform .25s var(--ease-out), background-color .2s;
+  }
+  .flutuante.visivel { opacity: 1; transform: none; pointer-events: auto; }
+  .flutuante:hover { background: #12803B; }
+  .flutuante svg { width: 30px; height: 30px; }
+  @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
+  @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
+</style>
+<script>document.documentElement.classList.add("com-js");</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="envoltorio topo-grade">
+    <a class="marca" href="#" translate="no"><img src="img/logo-escuro-txt.png" width="550" height="100" alt="Fox Phone"></a>
+    <button class="menu-botao" type="button" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#conserto">Orçamento de conserto</a>
+      <a href="#celulares">Celulares</a>
+      <a href="#loja">A loja</a>
+      <a href="#contato">Onde estamos</a>
+      <a class="menu-tel" href="https://wa.me/5516974062662" target="_blank" rel="noopener">(16) 97406-2662</a>
+    </nav>
+  </div>
+</header>
+
+<section class="abertura" aria-labelledby="titulo">
+  <svg class="trilhas" id="trilhas" aria-hidden="true" preserveAspectRatio="xMidYMid slice"></svg>
+  <div class="envoltorio abertura-grade">
+    <div class="abertura-texto">
+      <h1 id="titulo" style="--i:0">iPhone, Xiaomi e assis&shy;tência técnica em Cravinhos</h1>
+      <p class="abertura-sub" style="--i:1">Vendemos celulares novos e seminovos e consertamos iPhone e Android na nossa loja da Av. Pedro Duarte Amoroso.</p>
+      <ul class="abertura-lista" style="--i:2">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg>Novos e seminovos</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg>Conserto de iPhone e Android</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg>Boleto, cartão e Pix</li>
+      </ul>
+      <div class="abertura-acoes" style="--i:3">
+        <a class="btn btn-laranja" href="#conserto">Pedir orçamento de conserto</a>
+        <a class="btn btn-vidro" href="#celulares">Escolher um celular</a>
+      </div>
+    </div>
+    <div class="aparelho" style="--i:2">
+      <img src="img/loja.webp" width="800" height="1067" alt="Interior da loja Fox Phone, com o balcão de atendimento e a parede de capas e acessórios" fetchpriority="high">
+      <p class="aparelho-nota"><strong>5,0</strong>296 avaliações no Google</p>
+    </div>
+  </div>
+</section>
+<div class="fatos">
+  <div class="envoltorio fatos-grade">
+    <p class="fato"><strong><span class="estrelas" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.3l-5.6 2.9 1.1-6.3-4.6-4.4 6.3-.9Z"/></svg></span>5,0 no Google</strong><a href="https://maps.google.com/?cid=15683417079623364849" target="_blank" rel="noopener">Ler as 296 avaliações</a></p>
+    <p class="fato"><strong>Av. Pedro Duarte Amoroso, 1131</strong>João Berbel, Cravinhos</p>
+    <p class="fato"><strong>Boleto, cartão e Pix</strong>Venda no boleto para Android</p>
+  </div>
+</div>
+
+<main id="conteudo">
+  <section class="secao" id="servicos" aria-labelledby="titulo-servicos">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela>
+        <h2 id="titulo-servicos">O que fazemos</h2>
+        <p>Assistência técnica, venda de celulares novos e seminovos e acessórios, tudo no mesmo balcão.</p>
+      </div>
+      <div class="servicos">
+        <article class="servico servico-destaque" data-revela style="--i:0">
+          <svg class="trilhas-cartao" id="trilhas-cartao" viewBox="0 0 600 400" preserveAspectRatio="xMaxYMax slice" aria-hidden="true"></svg>
+          <div>
+            <svg class="servico-desenho" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="5" width="20" height="38" rx="4"/><path d="M21 9h6M14 34h20"/><path d="m29 15-6 7h5l-6 7"/></svg>
+          </div>
+          <div>
+            <h3>Assistência técnica em iPhone e Android</h3>
+            <p style="margin-top:.7rem">Avaliamos o aparelho na loja e informamos o orçamento antes de qualquer conserto.</p>
+            <ul>
+              <li>Troca de tela e vidro</li>
+              <li>Bateria que não dura</li>
+              <li>Conector de carga</li>
+              <li>Câmera, som e botões</li>
+              <li>Aparelho que caiu na água</li>
+              <li>Aparelho que não liga</li>
+            </ul>
+            <a class="btn btn-laranja" href="#conserto">Pedir orçamento de conserto</a>
+          </div>
+        </article>
+        <article class="servico servico-menor" data-revela style="--i:1">
+          <svg class="servico-desenho" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="5" width="20" height="38" rx="4"/><rect x="17.5" y="9" width="6" height="6" rx="1.5"/><path d="M21 39h6"/></svg>
+          <h3>iPhone novos e seminovos</h3>
+          <p>Aparelhos novos e seminovos, com pagamento no cartão ou Pix.</p>
+          <a href="#celulares" data-marca="iPhone">Consultar iPhone</a>
+        </article>
+        <article class="servico servico-menor" data-revela style="--i:2">
+          <svg class="servico-desenho" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="5" width="20" height="38" rx="4"/><rect x="17.5" y="9" width="5" height="11" rx="1.5"/><path d="M21 39h6"/></svg>
+          <h3>Xiaomi novos e seminovos</h3>
+          <p>Aparelhos novos e seminovos, com opção de compra no boleto.</p>
+          <a href="#celulares" data-marca="Xiaomi">Consultar Xiaomi</a>
+        </article>
+        <article class="servico" data-revela style="--i:0">
+          <svg class="servico-desenho" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 8h14a3 3 0 0 1 3 3v26a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3Z"/><path d="M14 16h20M20 28l4-4 4 4"/></svg>
+          <h3>Capas</h3>
+          <p>Uma parede inteira de capas, organizadas por modelo de aparelho.</p>
+        </article>
+        <article class="servico" data-revela style="--i:1">
+          <svg class="servico-desenho" viewBox="0 0 48 48" aria-hidden="true"><rect x="12" y="10" width="16" height="16" rx="3"/><path d="M17 10V5M23 10V5M20 26v6a6 6 0 0 0 6 6h4a6 6 0 0 0 6-6v-4"/></svg>
+          <h3>Carregadores e cabos</h3>
+          <p>Carregadores, cabos e fontes para iPhone e Android.</p>
+        </article>
+        <article class="servico" data-revela style="--i:2">
+          <svg class="servico-desenho" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 26a14 14 0 0 1 28 0"/><rect x="8" y="26" width="7" height="12" rx="3"/><rect x="33" y="26" width="7" height="12" rx="3"/></svg>
+          <h3>Outros acessórios</h3>
+          <p>Consulte pelo WhatsApp a disponibilidade de acessórios para o seu modelo.</p>
+        </article>
+        <div class="boleto" data-revela>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="11" width="36" height="26" rx="3"/><path d="M12 18v12M16 18v12M19 18v12M24 18v12M27 18v12M31 18v12M36 18v12"/></svg>
+          <p><strong>Celular Android no boleto</strong>Temos atendimento exclusivo para a compra de Android no boleto. Para cartão e Pix, o atendimento é o de vendas.</p>
+          <a class="btn" href="#celulares" data-pagamento="Boleto">Consultar no boleto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="borda borda-branca" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true"></svg>
+  <section class="secao secao-branca" id="conserto" aria-labelledby="titulo-conserto">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela>
+        <h2 id="titulo-conserto">Orçamento de conserto</h2>
+        <p>Conte o que aconteceu com o aparelho e envie pelo WhatsApp. Respondemos com a avaliação e o prazo.</p>
+      </div>
+      <div class="ferramenta-grade">
+        <form class="ferramenta-form" id="form-conserto" novalidate data-revela>
+          <fieldset class="passo">
+            <legend><span class="passo-num" aria-hidden="true">1</span>Aparelho</legend>
+            <div class="aparelhos" id="conserto-aparelhos"></div>
+          </fieldset>
+          <fieldset class="passo">
+            <legend><span class="passo-num" aria-hidden="true">2</span>Modelo</legend>
+            <label class="campo"><span>Qual é o modelo? <small>(se souber)</small></span><input type="text" id="conserto-modelo" placeholder="Ex.: iPhone 13 ou Redmi Note 13" maxlength="50"></label>
+          </fieldset>
+          <fieldset class="passo">
+            <legend><span class="passo-num" aria-hidden="true">3</span>O que aconteceu</legend>
+            <div class="opcoes" role="group" aria-label="Problemas do aparelho" id="conserto-problemas"></div>
+          </fieldset>
+          <label class="campo campo-nome"><span>Seu nome <small>(opcional)</small></span><input type="text" id="conserto-nome" autocomplete="name" maxlength="60"></label>
+        </form>
+        <aside class="painel" aria-labelledby="titulo-previa-conserto" data-revela style="--i:1">
+          <svg class="painel-trilhas" viewBox="0 0 600 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+          <div class="painel-fixo">
+            <h3 id="titulo-previa-conserto">Mensagem que será enviada</h3>
+            <div class="previa" id="conserto-previa" aria-live="polite"></div>
+            <a class="btn btn-zap" id="conserto-enviar" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+              Enviar para a assistência
+            </a>
+            <p class="painel-nota">O orçamento final é confirmado depois da avaliação do aparelho na loja.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <svg class="borda" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+  <section class="secao" id="celulares" aria-labelledby="titulo-celulares">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela>
+        <h2 id="titulo-celulares">Escolha o seu próximo celular</h2>
+        <p>Diga o que procura e a forma de pagamento. A mensagem vai para o atendimento certo: vendas no cartão e Pix ou vendas no boleto.</p>
+      </div>
+      <div class="ferramenta-grade">
+        <form class="ferramenta-form" id="form-celular" novalidate data-revela>
+          <fieldset class="passo">
+            <legend><span class="passo-num" aria-hidden="true">1</span>Marca</legend>
+            <div class="aparelhos" id="celular-marcas"></div>
+          </fieldset>
+          <fieldset class="passo">
+            <legend><span class="passo-num" aria-hidden="true">2</span>Preferências</legend>
+            <div class="campos">
+              <p class="campo campo-largo" id="rot-condicao" style="margin-bottom:-.4rem">Condição</p>
+              <div class="opcoes campo-largo" role="radiogroup" aria-labelledby="rot-condicao" id="celular-condicao"></div>
+              <p class="campo campo-largo" id="rot-memoria" style="margin-bottom:-.4rem">Armazenamento</p>
+              <div class="opcoes campo-largo" role="radiogroup" aria-labelledby="rot-memoria" id="celular-memoria"></div>
+              <label class="campo campo-largo"><span>Modelo desejado <small>(opcional)</small></span><input type="text" id="celular-modelo" placeholder="Ex.: iPhone 15 ou Redmi Note 14" maxlength="50"></label>
+            </div>
+          </fieldset>
+          <fieldset class="passo">
+            <legend><span class="passo-num" aria-hidden="true">3</span>Forma de pagamento</legend>
+            <div class="opcoes" role="radiogroup" aria-label="Forma de pagamento" id="celular-pagamento"></div>
+            <p class="aviso" id="celular-aviso" hidden>A venda no boleto é feita para aparelhos Android.</p>
+          </fieldset>
+          <label class="campo campo-nome"><span>Seu nome <small>(opcional)</small></span><input type="text" id="celular-nome" autocomplete="name" maxlength="60"></label>
+        </form>
+        <aside class="painel" aria-labelledby="titulo-previa-celular" data-revela style="--i:1">
+          <svg class="painel-trilhas" viewBox="0 0 600 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+          <div class="painel-fixo">
+            <h3 id="titulo-previa-celular">Mensagem que será enviada</h3>
+            <p class="painel-destino">Atendimento: <strong id="celular-destino">Vendas no cartão e Pix</strong></p>
+            <div class="previa" id="celular-previa" aria-live="polite"></div>
+            <a class="btn btn-zap" id="celular-enviar" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+              Enviar para vendas
+            </a>
+            <p class="painel-nota">Preços e modelos disponíveis são informados pelo atendimento.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <svg class="borda borda-branca" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true"></svg>
+  <section class="secao secao-branca" id="loja" aria-labelledby="titulo-loja">
+    <div class="envoltorio loja-grade">
+      <div class="loja-texto" data-revela>
+        <h2 id="titulo-loja">Um novo conceito em assistência técnica</h2>
+        <p>Nossa loja fica na Av. Pedro Duarte Amoroso, no João Berbel. No mesmo espaço estão o balcão de vendas, a assistência técnica e a parede de acessórios.</p>
+        <div class="avaliacoes">
+          <blockquote class="avaliacao"><p>“Super indico, pessoal atencioso, melhor loja de Cravinhos.”</p><footer>Avaliação no Google</footer></blockquote>
+          <blockquote class="avaliacao"><p>“Empresa ótima, funcionários atenciosos, entrega no prazo combinado, preço justo.”</p><footer>Avaliação no Google</footer></blockquote>
+          <blockquote class="avaliacao"><p>“Comprei o celular nessa loja, ótimo. Atendimento muito bom.”</p><footer>Avaliação no Google</footer></blockquote>
+          <a class="avaliacoes-link" href="https://maps.google.com/?cid=15683417079623364849" target="_blank" rel="noopener">Ver todas as avaliações no Google</a>
+        </div>
+      </div>
+      <div class="fotos" data-revela style="--i:1">
+        <figure><img src="img/balcao.webp" width="800" height="1067" alt="Balcão de atendimento da Fox Phone com bancos altos" loading="lazy"></figure>
+        <figure><img src="img/parede-capas.webp" width="800" height="1067" alt="Parede de capas de celular organizadas por modelo" loading="lazy"></figure>
+        <figure><img src="img/loja.webp" width="800" height="1067" alt="Vista do salão da loja" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+  <svg class="borda" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+  <section class="secao" id="contato" aria-labelledby="titulo-contato">
+    <div class="envoltorio contato-grade">
+      <div class="contato-dados" data-revela>
+        <h2 id="titulo-contato">Onde estamos</h2>
+        <div class="zaps">
+          <h3>WhatsApp</h3>
+          <p class="zap-linha"><a href="https://wa.me/5516974062662" target="_blank" rel="noopener">(16) 97406-2662</a><span>Vendas no cartão e Pix, assistência técnica e acessórios</span></p>
+          <p class="zap-linha"><a href="https://wa.me/5516997499202" target="_blank" rel="noopener">(16) 99749-9202</a><span>Vendas de Android no boleto</span></p>
+        </div>
+        <div><h3>Endereço</h3><p>Av. Pedro Duarte Amoroso, 1131<br>João Berbel, Cravinhos (SP), 14140-000</p></div>
+        <div><h3>Instagram</h3><p><a href="https://www.instagram.com/foxphone016" target="_blank" rel="noopener">@foxphone016</a></p></div>
+      </div>
+      <div class="fachada" id="mapa" data-revela style="--i:1">
+        <img src="img/fachada.webp" width="900" height="900" alt="Fachada da Fox Phone, com o letreiro preto e as vitrines" loading="lazy">
+        <button class="btn btn-laranja" type="button" id="mostrar-mapa">Mostrar o mapa</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="envoltorio rodape-grade">
+    <a class="marca" href="#" translate="no"><img src="img/logo-branco.png" width="550" height="100" alt="Fox Phone" style="width:170px"></a>
+    <div class="rodape-dir">
+      <p>Fox Phone Eletrônicos Ltda</p>
+      <p>CNPJ 57.488.791/0001-68</p>
+    </div>
+  </div>
+</footer>
+
+<a class="flutuante" id="flutuante" href="https://wa.me/5516974062662" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp" title="Conversar no WhatsApp" tabindex="-1">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   DADOS - o que a loja muda fica aqui em cima
+   ============================================================ */
+/* dois WhatsApp, como no Linktree da loja (so numeros, com 55 e DDD) */
+const ZAP_VENDAS = "5516974062662";  /* cartao/Pix, assistencia e acessorios */
+const ZAP_BOLETO = "5516997499202";  /* Android no boleto */
+
+const APARELHOS = [
+  { id: "iPhone", desenho: '<rect x="8" y="3" width="24" height="46" rx="6"/><rect x="12" y="7" width="7" height="7" rx="2"/>' },
+  { id: "Xiaomi", desenho: '<rect x="8" y="3" width="24" height="46" rx="5"/><rect x="12" y="7" width="5" height="12" rx="2"/>' },
+  { id: "Outro Android", desenho: '<rect x="8" y="3" width="24" height="46" rx="4"/><circle cx="20" cy="9" r="2"/>' },
+];
+const PROBLEMAS = ["Tela quebrada", "Bateria descarrega rápido", "Não carrega", "Caiu na água", "Câmera", "Som ou microfone", "Não liga", "Outro problema"];
+const CONDICOES = ["Novo", "Seminovo", "Sem preferência"];
+const MEMORIAS = ["128 GB", "256 GB", "512 GB", "Sem preferência"];
+const PAGAMENTOS = ["Cartão", "Pix", "Boleto"];
+
+const $ = (s) => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const reduzir = matchMedia("(prefers-reduced-motion: reduce)");
+
+/* ---------- trilhas de placa: segmentos retos e a 45 graus, com ilhas nas pontas ---------- */
+function sorteio(semente) { let s = semente; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
+function trilhas(svg, W, H, n, area, semente, ilhas = true) {
+  const r = sorteio(semente);
+  const passo = 22;
+  let html = "";
+  for (let i = 0; i < n; i++) {
+    let x = Math.round((area.x0 + r() * (area.x1 - area.x0)) / passo) * passo;
+    let y = Math.round((area.y0 + r() * (area.y1 - area.y0)) / passo) * passo;
+    let d = `M${x} ${y}`, dir = r() < .5 ? 1 : -1, len = 0;
+    const pontos = 3 + Math.floor(r() * 3);
+    for (let k = 0; k < pontos; k++) {
+      const dist = passo * (2 + Math.floor(r() * 6));
+      if (k % 2 === 0) { x += dir * dist; }
+      else { const dy = (r() < .5 ? 1 : -1) * dist * .6; x += dir * Math.abs(dy); y += dy; }
+      d += ` L${x} ${y.toFixed(0)}`;
+      len += dist * 1.5;
+    }
+    html += `<path d="${d}" style="--len:${Math.ceil(len)};--i:${i}"/>`;
+    if (ilhas) html += `<circle cx="${x}" cy="${y.toFixed(0)}" r="4.5" style="--i:${i}"/>`;
+  }
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = html;
+}
+function desenharAbertura() {
+  const cel = matchMedia("(max-width: 860px)").matches;
+  if (cel) trilhas($("#trilhas"), 600, 1000, 26, { x0: 0, x1: 600, y0: 0, y1: 520 }, 7);
+  else trilhas($("#trilhas"), 1600, 900, 40, { x0: 820, x1: 1600, y0: 40, y1: 860 }, 7);
+}
+desenharAbertura();
+matchMedia("(max-width: 860px)").addEventListener("change", desenharAbertura);
+trilhas($("#trilhas-cartao"), 600, 400, 16, { x0: 200, x1: 600, y0: 60, y1: 380 }, 11);
+document.querySelectorAll(".painel-trilhas").forEach((s, k) => trilhas(s, 600, 300, 14, { x0: 0, x1: 600, y0: 120, y1: 300 }, 23 + k));
+
+/* borda entre secoes: uma trilha continua com desvios a 45 graus e ilhas */
+document.querySelectorAll(".borda").forEach((svg, k) => {
+  const r = sorteio(31 + k);
+  let x = 0, y = 18, d = "M0 18", ilhas = "";
+  while (x < 1200) {
+    const reto = 60 + Math.floor(r() * 140);
+    x += reto; d += ` L${x} ${y}`;
+    if (r() < .5) ilhas += `<circle cx="${x}" cy="${y}" r="3.5"/>`;
+    const ny = y === 18 ? (r() < .5 ? 8 : 28) : 18;
+    x += Math.abs(ny - y); y = ny; d += ` L${x} ${y}`;
+  }
+  svg.innerHTML = `<path vector-effect="non-scaling-stroke" d="${d}"/>` + ilhas;
+});
+
+/* ---------- movimento padrao: revela cada bloco uma vez, ao entrar na tela ---------- */
+const observador = new IntersectionObserver((itens) => {
+  itens.forEach((it) => { if (it.isIntersecting) { it.target.classList.add("visto"); observador.unobserve(it.target); } });
+}, { rootMargin: "0px 0px -8% 0px", threshold: .12 });
+document.querySelectorAll("[data-revela]").forEach((el) => observador.observe(el));
+
+/* troca de conteudo: some e reaparece rapido, para mostrar o que mudou */
+function piscar(el) {
+  if (reduzir.matches || !el.animate) return;
+  el.animate([{ opacity: .35, transform: "translateY(3px)" }, { opacity: 1, transform: "none" }], { duration: 260, easing: "cubic-bezier(0.23, 1, 0.32, 1)" });
+}
+
+/* ---------- WhatsApp ---------- */
+const zap = (numero, texto) => `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+function opcoesHTML(lista, nome, tipo = "radio", marcado = null) {
+  return lista.map((o) => `<label class="opcao"><input type="${tipo}" name="${nome}" value="${o}"${o === marcado ? " checked" : ""}><span>${o}</span></label>`).join("");
+}
+function aparelhosHTML(nome, marcado, lista = APARELHOS) {
+  return lista.map((a) => `<label class="tipo"><svg viewBox="0 0 40 52" aria-hidden="true">${a.desenho}</svg><input type="radio" name="${nome}" value="${a.id}"${a.id === marcado ? " checked" : ""}>${a.id}</label>`).join("");
+}
+const valor = (form, nome) => (form.querySelector(`[name="${nome}"]:checked`) || {}).value || "";
+
+/* ---------- orcamento de conserto ---------- */
+const fConserto = $("#form-conserto");
+$("#conserto-aparelhos").innerHTML = aparelhosHTML("aparelho", "iPhone");
+$("#conserto-problemas").innerHTML = opcoesHTML(PROBLEMAS, "problema", "checkbox");
+function mensagemConserto() {
+  const aparelho = valor(fConserto, "aparelho");
+  const modelo = $("#conserto-modelo").value.trim();
+  const problemas = [...fConserto.querySelectorAll('[name="problema"]:checked')].map((i) => i.value.toLowerCase());
+  const nome = $("#conserto-nome").value.trim();
+  const linhas = [`Olá! Gostaria de um orçamento de conserto.`, `Aparelho: ${modelo ? modelo : aparelho}${modelo && !modelo.toLowerCase().includes(aparelho.toLowerCase().split(" ")[0]) ? ` (${aparelho})` : ""}`];
+  if (problemas.length) linhas.push(`Problema: ${problemas.join(", ")}`);
+  if (nome) linhas.push(`Meu nome é ${nome}.`);
+  const texto = linhas.join("\n");
+  $("#conserto-previa").textContent = texto;
+  $("#conserto-enviar").href = zap(ZAP_VENDAS, texto);
+}
+fConserto.addEventListener("input", () => { mensagemConserto(); });
+fConserto.addEventListener("change", () => { mensagemConserto(); piscar($("#conserto-previa")); });
+fConserto.addEventListener("submit", (e) => e.preventDefault());
+mensagemConserto();
+
+/* ---------- escolha do celular: boleto vai para o outro WhatsApp ---------- */
+const fCelular = $("#form-celular");
+$("#celular-marcas").innerHTML = aparelhosHTML("marca", "iPhone", APARELHOS.slice(0, 2).concat([{ id: "Outro Android", desenho: APARELHOS[2].desenho }]));
+$("#celular-condicao").innerHTML = opcoesHTML(CONDICOES, "condicao", "radio", "Sem preferência");
+$("#celular-memoria").innerHTML = opcoesHTML(MEMORIAS, "memoria", "radio", "Sem preferência");
+$("#celular-pagamento").innerHTML = opcoesHTML(PAGAMENTOS, "pagamento", "radio", "Cartão");
+function mensagemCelular() {
+  const marca = valor(fCelular, "marca");
+  const boleto = fCelular.querySelector('[name="pagamento"][value="Boleto"]');
+  /* boleto so para Android */
+  boleto.disabled = marca === "iPhone";
+  if (boleto.disabled && boleto.checked) fCelular.querySelector('[name="pagamento"][value="Cartão"]').checked = true;
+  $("#celular-aviso").hidden = marca !== "iPhone";
+  const pagamento = valor(fCelular, "pagamento");
+  const noBoleto = pagamento === "Boleto";
+  const condicao = valor(fCelular, "condicao"), memoria = valor(fCelular, "memoria");
+  const modelo = $("#celular-modelo").value.trim(), nome = $("#celular-nome").value.trim();
+  const tipo = marca === "Outro Android" ? "um celular Android" : `um ${marca}`;
+  const linhas = [`Olá! Tenho interesse em ${tipo}${condicao === "Sem preferência" ? "" : " " + condicao.toLowerCase()}.`];
+  if (modelo) linhas.push(`Modelo: ${modelo}`);
+  if (memoria !== "Sem preferência") linhas.push(`Armazenamento: ${memoria}`);
+  linhas.push(`Forma de pagamento: ${pagamento.toLowerCase()}`);
+  linhas.push("Poderiam me informar os modelos disponíveis e os valores?");
+  if (nome) linhas.push(`Meu nome é ${nome}.`);
+  const texto = linhas.join("\n");
+  const destinoAntes = $("#celular-destino").textContent;
+  $("#celular-destino").textContent = noBoleto ? "Vendas no boleto" : "Vendas no cartão e Pix";
+  if (destinoAntes !== $("#celular-destino").textContent) piscar($("#celular-destino"));
+  $("#celular-previa").textContent = texto;
+  $("#celular-enviar").href = zap(noBoleto ? ZAP_BOLETO : ZAP_VENDAS, texto);
+}
+fCelular.addEventListener("input", mensagemCelular);
+fCelular.addEventListener("change", () => { mensagemCelular(); piscar($("#celular-previa")); });
+fCelular.addEventListener("submit", (e) => e.preventDefault());
+/* atalhos dos cartoes: ja marcam a marca ou o boleto */
+document.querySelectorAll("[data-marca]").forEach((a) => a.addEventListener("click", () => { fCelular.querySelector(`[name="marca"][value="${a.dataset.marca}"]`).checked = true; mensagemCelular(); }));
+document.querySelectorAll("[data-pagamento]").forEach((a) => a.addEventListener("click", () => {
+  if (valor(fCelular, "marca") === "iPhone") fCelular.querySelector('[name="marca"][value="Xiaomi"]').checked = true;
+  mensagemCelular();
+  fCelular.querySelector('[name="pagamento"][value="Boleto"]').checked = true; mensagemCelular();
+}));
+mensagemCelular();
+
+/* ---------- botao do canto: aparece depois da abertura e sai no rodape ---------- */
+const flutuante = $("#flutuante");
+flutuante.href = zap(ZAP_VENDAS, "Olá! Vim pelo site da Fox Phone e gostaria de atendimento.");
+function mostrarFlutuante() {
+  const passou = $(".abertura").getBoundingClientRect().bottom < 0 && $(".rodape").getBoundingClientRect().top > innerHeight;
+  flutuante.classList.toggle("visivel", passou);
+  flutuante.tabIndex = passou ? 0 : -1;
+}
+addEventListener("scroll", mostrarFlutuante, { passive: true });
+
+/* ---------- mapa do Google so no clique (a foto da fachada some e o mapa aparece) ---------- */
+$("#mostrar-mapa").addEventListener("click", () => {
+  const caixa = $("#mapa");
+  const f = document.createElement("iframe");
+  f.className = "mapa-quadro";
+  f.title = "Mapa: Fox Phone, Av. Pedro Duarte Amoroso, 1131, Cravinhos";
+  f.src = "https://www.google.com/maps?q=-21.3383598,-47.7468516&z=17&output=embed";
+  f.addEventListener("load", () => f.classList.add("visto"));
+  caixa.appendChild(f);
+  caixa.classList.add("com-mapa");
+  f.focus();
+});
+
+/* ---------- menu do celular ---------- */
+const topo = $(".topo"), menuBotao = $("#menu-botao");
+function menu(abrir) {
+  topo.classList.toggle("menu-aberto", abrir);
+  menuBotao.setAttribute("aria-expanded", String(abrir));
+  menuBotao.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+}
+menuBotao.addEventListener("click", () => menu(!topo.classList.contains("menu-aberto")));
+$("#menu").addEventListener("click", (e) => { if (e.target.closest("a")) menu(false); });
+document.addEventListener("click", (e) => { if (!topo.contains(e.target)) menu(false); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && topo.classList.contains("menu-aberto")) { menu(false); menuBotao.focus(); }
+});
+matchMedia("(min-width: 961px)").addEventListener("change", (m) => { if (m.matches) menu(false); });
+
+mostrarFlutuante();
+</script>
+</body>
+</html>
