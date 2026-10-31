@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#0F0F10">
+<!-- o site tem modo escuro proprio: a extensao Dark Reader nao mexe -->
+<meta name="darkreader-lock">
 <title>Loja online Fox Phone | iPhone, Xiaomi e acessórios em Cravinhos</title>
 <meta name="description" content="iPhone seminovo, Xiaomi e acessórios. Escolha a cor e o armazenamento, pague no Pix ou no cartão e retire na loja ou receba em casa. Av. Pedro Duarte Amoroso, 1131, Cravinhos (SP).">
 <!-- DEMO: remover a linha abaixo quando publicar no dominio definitivo do cliente -->
@@ -34,7 +36,7 @@
      a capa, o carregador e o cabo que servem nele.
      ============================================================ */
   :root {
-    /* "light dark" so para o Chrome nao escurecer o site sozinho; o body volta para o claro */
+    /* claro e escuro: as cores do escuro ficam no fim do estilo, e o navegador nao escurece o site sozinho */
     color-scheme: light dark;
     --branco:   #FFFFFF;
     --papel:    #F2F3F5;   /* off-white frio das faixas */
@@ -69,7 +71,7 @@
   *, *::before, *::after { box-sizing: border-box; }
   html { background: #FFFFFF; scrollbar-color: #9DB0C4 #FFFFFF; scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body { color-scheme: light; overflow-x: clip; margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.0625rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
+  body { overflow-x: clip; margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.0625rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
   img, svg { max-width: 100%; }
   img { height: auto; }
   [hidden] { display: none !important; }
@@ -114,6 +116,7 @@
   .topo { position: sticky; top: 0; z-index: 30; background: var(--branco); border-bottom: 1px solid var(--linha); }
   .topo-grade { display: flex; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; padding-block: .55rem; }
   .marca { display: inline-flex; align-items: center; gap: .7rem; min-width: 0; min-height: 44px; color: var(--tinta-2); text-decoration: none; }
+  .marca picture { display: contents; }
   .marca img { display: block; width: clamp(150px, 8vw + 100px, 190px); height: auto; flex: none; }
   .marca span { display: grid; line-height: 1.1; }
   .marca strong { font-family: var(--fonte-titulo); font-size: 1.4rem; font-weight: 800; letter-spacing: -.02em; color: var(--tinta); }
@@ -235,7 +238,7 @@
   .vitrine { display: grid; gap: clamp(2.4rem, 4vw, 3.4rem); padding: 0; margin: 0; list-style: none; }
   .prateleira { min-width: 0; }
   .prateleira.some { display: none; }
-  .prateleira-topo { display: flex; align-items: center; gap: .5rem 1rem; margin-bottom: 1rem; }
+  .prateleira-topo { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-bottom: 1rem; }
   .prateleira-topo h3 { margin-right: auto; font-size: clamp(1.35rem, 1.15rem + .7vw, 1.75rem); }
   .ver-tudo { min-height: 44px; padding: 0; border: 0; background: none; color: var(--laranja-texto); font: 600 1rem/1.2 var(--fonte); text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
   .prateleira-setas { display: flex; gap: .4rem; }
@@ -487,6 +490,56 @@
   .flutuante svg { width: 30px; height: 30px; }
   @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
   @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
+
+  /* ---------- modo escuro: o preto do logo, a raposa laranja nos botoes e destaques ---------- */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --branco:   #141416;   /* fundo da pagina e dos cartoes */
+      --papel:    #0C0C0D;   /* faixas: mais fundas que os cartoes */
+      --papel-2:  #232327;
+      --nevoa:    #2A1D12;
+      --preto:    #050506;
+      --preto-2:  #1E1E21;
+      --laranja-texto:  #FF9A4D;   /* 8:1 no fundo */
+      --laranja-texto-2:#FFB57A;
+      --tinta:    #EDEEF0;
+      --tinta-2:  #A9ACB4;
+      --linha:    #2B2C31;
+      --linha-forte: #74777F;
+    }
+    html { background: var(--branco); scrollbar-color: #4A4B52 var(--branco); }
+    /* texto preto em cima do laranja, nos dois temas */
+    .btn, .sacola-botao, .selo { color: #141416; }
+    .btn-branco, .btn-linha { color: var(--tinta); }
+    .btn-zap { color: #fff; }
+    .sacola-botao .conta { background: #141416; color: #fff; }
+    .redes a:hover { color: #141416; }
+    /* selecionado: claro sobre o escuro */
+    .btn.adicionado, .opcao input:checked + span, .pilula:has(input:checked) { background: var(--tinta); color: var(--branco); }
+    /* banners de produto: a foto tem fundo branco, entao fica numa placa clara dentro da faixa escura */
+    .destaque:not(.destaque-escuro) { background: #1C1C1F; }
+    .destaque:not(.destaque-escuro) .destaque-foto { margin: 1.6rem 4.6rem 2.8rem 0; padding: 1rem; border-radius: 18px; background: var(--cor); }
+    .ponto::before { background: rgba(255, 255, 255, .3); }
+    .ponto[aria-current="true"]::before { background: var(--tinta); }
+    /* fotos de produto: sempre no branco */
+    .categoria span:first-child, .produto-foto, .ficha-foto { background: #fff; }
+    .categoria-todos span:first-child { background: var(--nevoa); }
+    /* faixa do conserto: grafite mais claro que a pagina, para nao sumir no fundo */
+    .conserto { background: var(--papel-2); }
+    .chegar-mapa { background: #fff; filter: invert(.9) hue-rotate(180deg); }
+    .ficha, .sacola { box-shadow: 0 0 0 1px var(--linha); }
+    .ficha::backdrop, .sacola::backdrop { background: rgba(0, 0, 0, .7); }
+    .previa { background: #005C4B; color: #E9EDEF; }
+    .sacola-pe .erro { color: #FF8A80; }
+    .status.pago { color: #5FD38D; }
+    .status.pago .pulso { background: #5FD38D; }
+    .aprovado circle { fill: #173D27; }
+    .aprovado path { stroke: #5FD38D; }
+  }
+  @media (prefers-color-scheme: dark) and (max-width: 760px) {
+    /* largura fixa: com aspect-ratio a margem lateral nao encolhe a placa */
+    .destaque:not(.destaque-escuro) .destaque-foto { justify-self: center; width: calc(100% - 7.2rem); margin: .9rem 0 0; padding: .6rem; }
+  }
 </style>
 <script>document.documentElement.classList.add("com-js");</script>
 </head>
@@ -504,7 +557,7 @@
 <header class="topo">
   <div class="envoltorio topo-grade">
     <a class="marca" href="#" translate="no" aria-label="Fox Phone, loja online">
-      <img src="../img/logo-escuro-txt.png" width="550" height="100" alt="">
+      <picture><source srcset="../img/logo-branco.png" media="(prefers-color-scheme: dark)"><img src="../img/logo-escuro-txt.png" width="550" height="100" alt=""></picture>
     </a>
     <nav class="menu" id="menu" aria-label="Principal">
       <a href="#produtos">Produtos</a>
