@@ -490,6 +490,61 @@
   @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
   @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
 
+  /* ============================================================
+     JEITO DA CASA: o que faz esta loja nao parecer as outras.
+     Vitrine de loja de celular: banner centralizado com o aparelho
+     embaixo, controles juntos no rodape do banner; categorias e
+     produtos em cartoes com a foto num palco cinza e o texto no centro.
+     ============================================================ */
+  .destaque { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); justify-items: center; align-items: start; min-height: clamp(460px, 46vw, 540px); text-align: center; }
+  .destaque-texto { justify-items: center; padding: clamp(2rem, 4vw, 2.8rem) var(--margem) 0; gap: .7rem; }
+  .destaque h2 { max-width: 14em; font-size: clamp(1.9rem, 1.2rem + 2.4vw, 3rem); }
+  .destaque-texto > p:not(.destaque-chapeu) { max-width: 34rem; }
+  .destaque-foto { align-self: stretch; width: 100%; padding: 1rem var(--margem) 4.2rem; }
+  .destaque-foto img { width: auto; max-width: min(100%, 520px); height: 100%; max-height: 250px; object-fit: contain; }
+  /* a fachada fica por baixo do texto sem esticar a altura do banner */
+  .destaque-escuro .destaque-foto { position: relative; padding: 0; margin-top: 1.2rem; }
+  .destaque-escuro .destaque-foto img { position: absolute; inset: 0; width: 100%; max-width: none; max-height: none; height: 100%; object-position: 50% 40%; -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%); mask-image: linear-gradient(180deg, transparent, #000 30%); }
+  /* setas e pontos juntos, no centro de baixo */
+  .destaques .seta { top: auto; bottom: 14px; translate: none; width: 40px; height: 40px; box-shadow: inset 0 0 0 1px var(--linha); }
+  .destaques .seta-ant { left: calc(50% - 112px); }
+  .destaques .seta-prox { right: calc(50% - 112px); }
+  .destaques .pontos { bottom: 14px; }
+  .no-escuro .seta { box-shadow: none; }
+  @media (max-width: 760px) {
+    .destaque { min-height: 0; }
+    .destaque-foto { order: 0; aspect-ratio: auto; height: 260px; padding: .8rem var(--margem) 4rem; }
+    .destaque-texto { padding: 1.8rem var(--margem) 0; }
+    .destaque-escuro .destaque-foto { padding: 0; margin-top: .8rem; }
+    .destaque-escuro .destaque-foto img { -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%); mask-image: linear-gradient(180deg, transparent, #000 30%); }
+    .destaques .seta { top: auto; width: 40px; height: 40px; }
+    .destaques .seta-ant { left: calc(50% - 104px); }
+    .destaques .seta-prox { right: calc(50% - 104px); }
+  }
+
+  /* fatos em cartoes cinza, icone em cima */
+  .fatos { gap: .75rem; padding-top: .9rem; }
+  .fato { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: .45rem; padding: 1rem .8rem; border-radius: var(--raio); background: var(--papel); text-align: center; }
+  .fato svg { width: 30px; height: 30px; }
+  @media (max-width: 460px) { .fatos { grid-template-columns: repeat(2, minmax(0, 1fr)); } .fato { font-size: .88rem; padding: .85rem .6rem; } }
+
+  /* categorias: cartao branco com o aparelho */
+  .categoria { gap: .4rem; padding: .6rem .5rem .9rem; border-radius: 18px; background: var(--branco); box-shadow: inset 0 0 0 1px var(--linha); transition: box-shadow var(--dur-ui) ease; }
+  .categoria span:first-child { width: 100%; border-radius: 12px; background: var(--branco); box-shadow: none; }
+  .categoria img { padding: 8%; }
+  .categoria-todos span:first-child { background: var(--nevoa); }
+  .categoria[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--tinta); }
+  .categoria[aria-pressed="true"] span:first-child { box-shadow: none; }
+
+  /* produto: palco cinza e texto centralizado */
+  .produto { border-radius: 18px; box-shadow: none; }
+  .produto-foto { margin: 8px 8px 0; border-radius: 12px; border-bottom: 0; background: var(--papel); overflow: hidden; }
+  .produto-foto img { mix-blend-mode: multiply; padding: 6%; }
+  .produto-info { align-items: center; text-align: center; }
+  .produto h4, .produto-desc { width: 100%; }
+  .selo { border-radius: 6px; background: var(--preto); color: #fff; }
+  .produto-preco { font-size: 1.25rem; }
+
 </style>
 <script>document.documentElement.classList.add("com-js");</script>
 </head>
